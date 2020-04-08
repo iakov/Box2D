@@ -234,7 +234,7 @@ void b2Joint::Draw(b2Draw* draw) const
 
 	case e_pulleyJoint:
 	{
-		b2PulleyJoint* pulley = (b2PulleyJoint*)this;
+		const b2PulleyJoint* pulley = (const b2PulleyJoint*)this;
 		b2Vec2 s1 = pulley->GetGroundAnchorA();
 		b2Vec2 s2 = pulley->GetGroundAnchorB();
 		draw->DrawSegment(s1, p1, color);

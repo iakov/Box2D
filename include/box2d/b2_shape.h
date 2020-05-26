@@ -46,8 +46,11 @@ struct b2MassData
 /// is created. Shapes may encapsulate a one or more child shapes.
 class b2Shape
 {
+	b2Shape(const b2Shape&) = delete;
+protected:
+	b2Shape& operator=(const b2Shape &) = default;
 public:
-	
+	b2Shape() = default;
 	enum Type
 	{
 		e_circle = 0,

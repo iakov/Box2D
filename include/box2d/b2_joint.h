@@ -107,7 +107,10 @@ struct b2JointDef
 /// various fashions. Some joints also feature limits and motors.
 class b2Joint
 {
+	b2Joint(b2Joint const &) = delete;
+	b2Joint& operator=(const b2Joint &) = delete;
 public:
+	b2Joint() = default;
 
 	/// Get the type of the concrete joint.
 	b2JointType GetType() const;
